@@ -37,7 +37,18 @@ services:
 
 volumes:
   db-data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ~/data/db
+
   wp-data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ~/data/wp
 
 networks:
   inception-network:
