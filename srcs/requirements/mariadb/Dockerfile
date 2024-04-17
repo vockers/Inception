@@ -11,6 +11,4 @@ WORKDIR /usr/local/bin
 COPY ./tools/setup.sh .
 RUN chmod +x ./setup.sh
 
-ENTRYPOINT ["./setup.sh"]
-
-CMD ["mariadbd"]
+CMD ["setup.sh", "mysqld_safe"]
